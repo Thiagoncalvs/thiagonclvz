@@ -10,6 +10,14 @@ a{
     text-decoration: none;
     color: currentColor;
 }
+.svg-logo{
+    max-width: 12.5%;
+}
+.svg-portfolio{
+    max-width: 12.5%;
+    margin: 0 auto 20px auto;
+    padding-top: 20px;
+}
 h1{
     text-align: center;
     margin-top: 100px;
@@ -23,7 +31,7 @@ img{
     background: white;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     border-bottom: 2px solid rgba(0, 0, 0, .05);
@@ -42,12 +50,16 @@ img{
 .menu li a{
     display: block;
     padding: 10px;
-}
-.menu li a:hover{
     color: rgb(134, 134, 134);
 }
-
+.menu li a:hover{
+    color: rgb(69, 70, 150);
+}
+.portfolio{
+    /* background: rgba(148, 74, 74, 0.377); */
+}
 .itens-portfolio{
+    /* background: rgba(0, 0, 255, 0.301); */
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
@@ -62,8 +74,18 @@ img{
     h1{
         font-size: 2rem;
     }
+    .svg-logo{
+        max-width: 60%;
+    }
+    .svg-portfolio{
+        max-width: 60%;
+        margin: 0 auto 20px 0
+    }
     #btn-mobile{
         display: block;
+    }
+    .header{
+        justify-content: space-between;
     }
     .menu{
         display: block;
