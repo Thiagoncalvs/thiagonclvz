@@ -11,12 +11,8 @@ a{
     color: currentColor;
 }
 .svg-logo{
-    max-width: 12.5%;
-}
-.svg-portfolio{
-    max-width: 12.5%;
-    margin: 0 auto 20px auto;
-    padding-top: 20px;
+    width: 15%;
+    background: pink;
 }
 h1{
     text-align: center;
@@ -27,16 +23,23 @@ img{
     max-width: 100%;
     display: block;
 }
-.header{
+/*------------------CONFIGURAÇÕES GERAIS------------------*/
+
+
+.header{        /*----------------------------------------------MENU FIXO*/
     background: white;
+    padding: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    border-bottom: 2px solid rgba(0, 0, 0, .05);
 }
-
 #btn-mobile{
     display: none;
 }
@@ -55,92 +58,23 @@ img{
 .menu li a:hover{
     color: rgb(69, 70, 150);
 }
-.portfolio{
-    /* background: rgba(148, 74, 74, 0.377); */
-}
-.itens-portfolio{
-    /* background: rgba(0, 0, 255, 0.301); */
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.itens-portfolio > div{
-    flex: 1 1 200px;
-    margin: 10px;
-}
 
-@media (max-width:600px){
-    h1{
-        font-size: 2rem;
-    }
-    .svg-logo{
-        max-width: 60%;
-    }
-    .svg-portfolio{
-        max-width: 60%;
-        margin: 0 auto 20px 0
-    }
-    #btn-mobile{
-        display: block;
-    }
-    .header{
-        justify-content: space-between;
-    }
-    .menu{
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 63px;
-        right: 0px;
-        background: white;
-        height: 0px;
-        transition: .6s;
-        z-index: 1000;
-        visibility: hidden;
-        overflow-y: hidden;
-    }
-    #navmain.active .menu{
-        visibility: visible;
-        overflow-y: auto;
-        height: calc(100vh - 63px);
-    }
-    .menu li a{
-        padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, .05);
-    }
-    #btn-mobile{
-     display: flex;
-     padding: .5rem 1rem;
-     font-size: 1rem;
-     border: none;
-     background: none;
-     cursor: pointer;
-     gap: .5rem;
-    }
-    #hamburger{
-        border-top: 2px solid;
-        width: 20px;
-    }
-    #hamburger::after, #hamburger::before{
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: .3s;
-        position: relative;
-    }
-    #navmain.active #hamburger{
-        border-top-color: transparent;
-    }
-    #navmain.active #hamburger::before{
-        transform: rotate(135deg);
-    }
-    #navmain.active #hamburger::after{
-        transform: rotate(-135deg);
-        top: -7px;
-    }
+
+
+.mainbody{        /*----------------------------------------------MENU FIXO*/
+    background: rgba(197, 22, 22, 0.377);
+    display: grid;
+    grid-template-rows: 90vh 25vh 25vh 25vh;
+}
+.slidemain{        /*----------------------------------------------MENU FIXO*/
+    background: rgba(148, 74, 74, 0.377);
+}
+.portfolio{        /*----------------------------------------------MENU FIXO*/
+    background: rgba(148, 147, 74, 0.377);
+}
+.artigospdf{        /*----------------------------------------------MENU FIXO*/
+    background: rgba(74, 148, 92, 0.377);
+}
+.redescontatos{        /*----------------------------------------------MENU FIXO*/
+    background: rgba(74, 106, 148, 0.377);
 }
