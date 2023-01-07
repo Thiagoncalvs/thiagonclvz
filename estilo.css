@@ -70,10 +70,6 @@ h1{
     width: 21vw;
     height: 5vh;
 }
-#logomain:hover{
-    background: no-repeat center url("./IMG/thiagonçalvesRed.svg");
-    background-size: cover;
-}
 .menu{
     display: flex;
 }
