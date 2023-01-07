@@ -8,33 +8,37 @@
     <title>Thiago Gonçalves</title>
 </head>
 <body>
-    <header class="header">
-        <a class="svg-logo" href="./"><img src="./IMG/thiagonçalves.svg" alt="logo"></a>
+    <header data-menubranco="menu" class="header">
+        <a class="svg-logo" href="#inicio"><div id="logomain"></div></a>
         <nav id="navmain">
-            <button aria-label="Abrir menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <button id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir Menu">
                 <span id="hamburger"></span>
             </button>
             <ul class="menu" role="menu">
-                <li><a href="./">Portfólio</a></li>
-                <li><a href="./">Artigos em pdf</a></li>
-                <li><a href="./">Redes sociais e contatos</a></li>
+                <li><a ontouchend="toggleMenu(event)" href="#portfolio">Portfólio</a></li>
+                <li><a ontouchend="toggleMenu(event)" href="#artigos">Artigos em pdf</a></li>
+                <li><a ontouchend="toggleMenu(event)" href="#contatos">Redes sociais e contatos</a></li>
             </ul>
         </nav>
     </header>
     <section class="mainbody">
-        <section class="slidemain">
-            <h1>slidemain</h1>
+        <section id="inicio" class="slidemain">
+            <div class="apresentacaoSlide">
+                <h2>Oi, eu sou</h2>
+                <h1>Thiago Gonçalves.</h1>
+                <h3>Especialista em defesa e segurança cibernética, Desenvolvedor web e um apaixonado pelo mundo Free/Libre and Open Source.</h3>
+            </div>
         </section>
-        <section class="portfolio">
-            <h1>portfolio</h1>
+        <section id="portfolio" class="portfolio">
+            <h1>&#x1f477; portfólio &#x1f6a7;</h1>
         </section>
-        <section class="artigospdf">
-            <h1>artigospdf</h1>
+        <section id="artigos" class="artigospdf">
+            <h1>&#x1f477; artigos/pdf &#x1f6a7;</h1>
         </section>
-        <section class="redescontatos">
-            <h1>redescontatos</h1>
+        <section id="contatos" class="redescontatos">
+            <h1>&#x1f477; contatos &#x1f6a7;</h1>
         </section>
     </section>
-    <!-- <script src="./motor.js"></script> -->
+    <script src="./motor.js"></script>
 </body>
 </html>

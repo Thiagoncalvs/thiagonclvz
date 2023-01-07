@@ -1,3 +1,4 @@
+// ANIMAÇÃO DO MENU HAMBURGER
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event){
@@ -13,5 +14,41 @@ function toggleMenu(event){
     }
 };
 
-// btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+// INTERAÇÃO ITENS DO MENU COM O BOTÃO HAMBURGER
+
+
+// ANIMAÇÃO DA APRESENTAÇÃO PESSOAL
+function typeWriter(elemento){
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 75 * i);
+    })
+}
+
+const myh3 = document.querySelector('h3');
+typeWriter(myh3);
+
+// ANIMAÇÃO MENU BRANCO
+const target = document.querySelectorAll('[data-menubranco]');
+
+function animeScroll(){
+    const windowTop = window.pageYOffset - ((window.innerHeight * 3) / 10); 
+    target.forEach(function(elementmenu){
+        if((windowTop) > elementmenu.offsetTop){
+            elementmenu.classList.add('esbranquicado');
+        } else {
+            elementmenu.classList.remove('esbranquicado');
+        }
+    })
+}
+
+animeScroll();
+
+if(target.length){
+    window.addEventListener('scroll', function(){
+        animeScroll();
+    })
+}

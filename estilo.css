@@ -1,16 +1,36 @@
+@font-face {
+    font-family: 'robotoRegular';
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'robotoBold';
+    src: url(./fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url(./fonts/Roboto/Roboto-Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #42413E;
+}
 body, ul, li, p{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-size: 1.3rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(36, 36, 36);
+    font-size: 1.2rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'robotoRegular', sans-serif;
+    text-transform: uppercase;
+    color: #42413E;
 }
 a{
     text-decoration: none;
     color: currentColor;
 }
-.svg-logo{
+/* .svg-logo{
     width: 15%;
     background: pink;
 }
@@ -18,32 +38,42 @@ h1{
     text-align: center;
     margin-top: 100px;
     font-size: 3rem;
-}
-img{
+}*/
+/* img{
     max-width: 100%;
     display: block;
-}
+} */
 /*------------------CONFIGURAÇÕES GERAIS------------------*/
 
 
 .header{        /*----------------------------------------------MENU FIXO*/
-    background: white;
-    padding: 20px;
-    border-bottom: 2px solid rgba(0, 0, 0, .05);
+    background: none;
+    transition: .3s;
+    /* padding: 20px; */
+    /* border-bottom: 2px solid rgba(0, 0, 0, .05); */
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
+    height: 10vh;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    z-index: 100;
 }
-#btn-mobile{
-    display: none;
+#logomain{
+    background: no-repeat center url("./IMG/thiagonçalves.svg");
+    background-size: cover;
+    /* border: 1px solid red; */
+    width: 21vw;
+    height: 5vh;
 }
-
+#logomain:hover{
+    background: no-repeat center url("./IMG/thiagonçalvesRed.svg");
+    background-size: cover;
+}
 .menu{
     display: flex;
 }
@@ -53,28 +83,186 @@ img{
 .menu li a{
     display: block;
     padding: 10px;
-    color: rgb(134, 134, 134);
+    color: #42413E;
 }
 .menu li a:hover{
-    color: rgb(69, 70, 150);
+    color: #E12B36;
+}
+#btn-mobile{
+    display: none;
 }
 
 
 
 .mainbody{        /*----------------------------------------------MENU FIXO*/
-    background: rgba(197, 22, 22, 0.377);
+    background: white;
     display: grid;
-    grid-template-rows: 90vh 25vh 25vh 25vh;
+    grid-template-rows: 90vh 90vh 90vh 90vh;
 }
 .slidemain{        /*----------------------------------------------MENU FIXO*/
-    background: rgba(148, 74, 74, 0.377);
+    /* background: rgba(148, 74, 74, 0.377); */
+    background: no-repeat bottom url("./IMG/map.svg");
+    background-size: cover;
+}
+.apresentacaoSlide{
+    /* border: 1px solid #42413E; */
+    width: 41vw;
+    height: 33vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: none;
+    padding-left: 5vw;
+    font-family: 'robotolight';
+}
+.apresentacaoSlide > h1{
+    /* border: 1px solid #E12B36; */
+    font-size: 5rem;
+    font-family: 'robotoBold', sans-serif;
+}
+.apresentacaoSlide > h2{
+    /* border: 1px solid pink; */
+    font-size: 3rem;
+}
+.apresentacaoSlide > h3{
+    /* border:1px solid green; */
+    font-size: 2.2rem;
+    padding: 1.5vh 0;
+}
+.apresentacaoSlide > h3::after{
+    content: '|';
+    color: #E12B36;
+    margin-left: 5px;
+    opacity: 1;
+    animation: piscaCursor .7s infinite;
+}
+@keyframes piscaCursor {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
 }
 .portfolio{        /*----------------------------------------------MENU FIXO*/
-    background: rgba(148, 147, 74, 0.377);
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 5px solid yellow;
+}
+.portfolio > h1{
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
 }
 .artigospdf{        /*----------------------------------------------MENU FIXO*/
-    background: rgba(74, 148, 92, 0.377);
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 5px solid yellow;
+}
+.artigospdf > h1{
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
 }
 .redescontatos{        /*----------------------------------------------MENU FIXO*/
-    background: rgba(74, 106, 148, 0.377);
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 5px solid yellow;
+}
+.redescontatos > h1{
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+    .header{        /*----------------------------------------------MENU FIXO*/
+        background: white;
+    }
+    #logomain{
+        width: 72vw;
+        height: 4vh;
+    }
+    .slidemain{
+        background: no-repeat bottom url("./IMG/map-mobile.svg");
+        background-size: cover;
+        background-position-x: 65%;
+    }
+    .apresentacaoSlide{
+        width: 80vw;
+        height: 33vh;
+        /* top: 40%; */
+    }
+    .apresentacaoSlide > h1{
+        font-size: 2.35rem;
+    }
+    .apresentacaoSlide > h2{
+        font-size: 1.8rem;
+    }
+    .apresentacaoSlide > h3{
+        font-size: 1.5rem;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        width: 100vw;
+        top: 10vh;
+        right: 0;
+        background: white;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: .6s;
+        z-index: 1000;
+    }
+    #navmain.active .menu{
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+    .menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 1px solid #42413e27;
+    }
+    #btn-mobile{
+        display: block; /*tirar depois o flex*/
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    #hamburger{
+        display: block;
+        border-top: 2px solid;/*verificar se precisa tirar essa borda*/
+        width: 20px;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #navmain.active #hamburger{
+        border-top-color: transparent;
+    }
+    #navmain.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    #navmain.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/* ANIMAÇÕES */
+.esbranquicado{
+    background: white;
 }
