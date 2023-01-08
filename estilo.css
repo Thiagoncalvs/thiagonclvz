@@ -24,6 +24,7 @@
     padding: 0;
     color: #42413E;
     /* border: 1px dashed #E12B36; */
+    user-select: none;
 }
 body, ul, li, p{
     margin: 0px;

@@ -10,14 +10,15 @@
 <body>
     <header data-menubranco="menu" class="header">
         <div id="logomaintwo">
-            <a href="#inicio" class="logopartone">THIAGO</a>
-            <a href="#inicio" class="logoparttwo">NÇALVES</a>
+            <a class="logopartone">THIAGO</a>
+            <a class="logoparttwo">NÇALVES</a>
         </div>
         <nav id="navmain">
             <button id="btn-mobile" aria-expanded="false" aria-controls="menu" aria-haspopup="true" aria-label="Abrir Menu">
                 <span id="hamburger"></span>
             </button>
             <ul class="menu" role="menu">
+                <li><a ontouchend="toggleMenu(event)" href="#home">home</a></li>
                 <li><a ontouchend="toggleMenu(event)" href="#portfolio">Portfolio</a></li>
                 <li><a ontouchend="toggleMenu(event)" href="#artigos">Articles in pdf</a></li>
                 <li><a ontouchend="toggleMenu(event)" href="#contatos">Social Media and Contact</a></li>
@@ -25,7 +26,7 @@
         </nav>
     </header>
     <section class="mainbody">
-        <section id="inicio" class="slidemain">
+        <section id="home" class="slidemain">
             <div class="apresentacaoSlide">
                 <h2>Hi There! I am</h2>
                 <h1>Thiago Gonçalves</h1>
