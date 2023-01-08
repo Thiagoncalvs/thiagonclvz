@@ -181,6 +181,79 @@ a{
     font-size: 2rem;
 }
 
+@media (min-width: 3800px) {
+    body, ul, li, p{
+        font-size: 2.3rem;
+    }
+    #logomaintwo{
+        font-size: 5rem;
+    }
+    .apresentacaoSlide{
+        width: 60vw;
+        height: 45vh;
+    }
+    .apresentacaoSlide > h1{
+        font-size: 10rem;
+        font-family: 'robotoBold', sans-serif;
+    }
+    .apresentacaoSlide > h2{
+        font-size: 6rem;
+    }
+    .apresentacaoSlide > h3{
+        font-size: 4rem;
+        padding: 1.5vh 0;
+        width: 50vw;
+    }
+}
+@media (max-width: 1280px) {
+    .slidemain{
+        background: no-repeat bottom url("./IMG/map-mobile.svg");
+        background-size: cover;
+        background-position-x: 70%;
+    }
+    .apresentacaoSlide{
+        width: 60vw;
+        height: 45vh;
+    }
+    .apresentacaoSlide > h1{
+        font-size: 5rem;
+        font-family: 'robotoBold', sans-serif;
+    }
+    .apresentacaoSlide > h2{
+        font-size: 3rem;
+    }
+    .apresentacaoSlide > h3{
+        font-size: 2.2rem;
+        padding: 1.5vh 0;
+    }
+}
+@media (max-width: 1024px) {
+    .slidemain{        /*----------------------------------------------MENU FIXO*/
+        /* background: rgba(148, 74, 74, 0.377); */
+        background: no-repeat bottom url("./IMG/map-mobile.svg");
+        background-size: cover;
+        background-position-x: 70%;
+    }
+    .apresentacaoSlide{
+        width: 90vw;
+        height: 40vh;
+    }
+    .apresentacaoSlide > h1{
+        /* border: 1px solid #E12B36; */
+        font-size: 5rem;
+        font-family: 'robotoBold', sans-serif;
+    }
+    .apresentacaoSlide > h2{
+        /* border: 1px solid pink; */
+        font-size: 3rem;
+    }
+    .apresentacaoSlide > h3{
+        /* border:1px solid green; */
+        font-size: 2.2rem;
+        padding: 1.5vh 0;
+        width: 63vw;
+    }
+}
 @media (max-width: 600px) {
     .header{        /*----------------------------------------------MENU FIXO*/
         background: white;
