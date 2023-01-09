@@ -35,6 +35,7 @@ body, ul, li, p{
     font-family: 'robotoRegular', sans-serif;
     text-transform: uppercase;
     color: #42413E;
+    /* color: white; */
 }
 a{
     text-decoration: none;
@@ -108,7 +109,7 @@ a{
     background-size: cover;
 }
 .apresentacaoSlide{
-    /* border: 1px solid #42413E; */
+    border: 1px solid #42413E;
     width: 41vw;
     height: 33vh;
     position: relative;
@@ -119,16 +120,16 @@ a{
     font-family: 'robotolight';
 }
 .apresentacaoSlide > h1{
-    /* border: 1px solid #E12B36; */
+    border: 1px solid #E12B36;
     font-size: 5rem;
     font-family: 'robotoBold', sans-serif;
 }
 .apresentacaoSlide > h2{
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
     font-size: 3rem;
 }
 .apresentacaoSlide > h3{
-    /* border:1px solid green; */
+    border:1px solid green;
     font-size: 2.2rem;
     padding: 1.5vh 0;
 }
@@ -279,6 +280,7 @@ a{
     }
     .apresentacaoSlide > h3{
         font-size: 1.7rem;
+        width: auto;
     }
     .menu{
         display: block;
