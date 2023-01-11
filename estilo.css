@@ -18,6 +18,13 @@
     font-family: 'robotoThin';
     src: url(./fonts/Roboto/Roboto-Thin.ttf);
 }
+:root{
+    --MeuPreto: #42413E;
+    --MeuPretoTransp: #42413e27;
+    --MeuBranco: #f7f7f7;
+    --MeuVermelho: #E12B36;
+
+}
 
 *{
     margin: 0;
@@ -101,15 +108,15 @@ a{
 .mainbody{        /*----------------------------------------------MENU FIXO*/
     background: white;
     display: grid;
-    grid-template-rows: 90vh 90vh 90vh 90vh;
+    grid-template-rows: 90vh 80vh 80vh 90vh;
 }
 .slidemain{        /*----------------------------------------------MENU FIXO*/
     /* background: rgba(148, 74, 74, 0.377); */
-    background: no-repeat bottom url("./IMG/map.svg");
+    background: no-repeat bottom url("./IMG/map.svg") var(--MeuBranco);
     background-size: cover;
 }
 .apresentacaoSlide{
-    border: 1px solid #42413E;
+    /* border: 1px solid #42413E; */
     width: 41vw;
     height: 33vh;
     position: relative;
@@ -120,16 +127,17 @@ a{
     font-family: 'robotolight';
 }
 .apresentacaoSlide > h1{
-    border: 1px solid #E12B36;
+    /* border: 3px solid #E12B36; */
+    /* outline: 3px dashed black; */
     font-size: 5rem;
     font-family: 'robotoBold', sans-serif;
 }
 .apresentacaoSlide > h2{
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     font-size: 3rem;
 }
 .apresentacaoSlide > h3{
-    border:1px solid green;
+    /* border:1px solid green; */
     font-size: 2.2rem;
     padding: 1.5vh 0;
 }
@@ -149,21 +157,74 @@ a{
     }
 }
 .portfolio{        /*----------------------------------------------MENU FIXO*/
-    background: white;
+    background: no-repeat top right url('./IMG/fundoPort.svg') var(--MeuBranco);
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
-    border-bottom: 5px solid yellow;
 }
-.portfolio > h1{
+.portfolio .corpo{
+    width: 70%;
+    height: 90%;
     align-self: center;
     justify-self: center;
-    font-size: 2rem;
+
+    display: grid;
+    grid-template-rows: 1fr 6fr;
 }
-.artigospdf{        /*----------------------------------------------MENU FIXO*/
-    background: white;
+.portfolio .corpo .cabecalho{
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.portfolio .corpo .cabecalho .titulo{
+    position: relative;
+}
+.portfolio .corpo .cabecalho .titulo::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    border-bottom: 5px solid #42413E;
+    width: 30%;
+}
+.portfolio .corpo .cabecalho .titulo > a{
+    font-size: 3rem;
+}
+.portfolio .corpo .conteudo{
+    background: none;
     display: grid;
     grid-template-columns: 1fr;
-    border-bottom: 5px solid yellow;
+    align-items: center;
+}
+.portfolio .corpo .conteudo .media-scroller{
+    background: none;
+    width: 100%;
+    height: 95%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    gap: 20px;
+    scroll-snap-type: inline mandatory;
+}
+.portfolio .corpo .conteudo .media-scroller .media-element{
+    background: no-repeat center url(./IMG/Frame\ 4.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.artigospdf{        /*----------------------------------------------MENU FIXO*/
+    background: var(--MeuBranco);
+    display: grid;
+    grid-template-columns: 1fr;
 }
 .artigospdf > h1{
     align-self: center;
@@ -171,10 +232,9 @@ a{
     font-size: 2rem;
 }
 .redescontatos{        /*----------------------------------------------MENU FIXO*/
-    background: white;
+    background: var(--MeuBranco);
     display: grid;
     grid-template-columns: 1fr;
-    border-bottom: 5px solid yellow;
 }
 .redescontatos > h1{
     align-self: center;
@@ -208,7 +268,7 @@ a{
 }
 @media (max-width: 1280px) {
     .slidemain{
-        background: no-repeat bottom url("./IMG/map-mobile.svg");
+        background: no-repeat bottom url("./IMG/map-mobile.svg") var(--MeuBranco);
         background-size: cover;
         background-position-x: 70%;
     }
@@ -229,9 +289,16 @@ a{
     }
 }
 @media (max-width: 1024px) {
+    .portfolio{        /*----------------------------------------------MENU FIXO*/
+        background: var(--MeuBranco);
+    }
+    .portfolio .corpo{
+        width: 95%;
+        height: 90%;
+    }
     .slidemain{        /*----------------------------------------------MENU FIXO*/
         /* background: rgba(148, 74, 74, 0.377); */
-        background: no-repeat bottom url("./IMG/map-mobile.svg");
+        background: no-repeat bottom url("./IMG/map-mobile.svg") var(--MeuBranco);
         background-size: cover;
         background-position-x: 70%;
     }
@@ -257,13 +324,13 @@ a{
 }
 @media (max-width: 600px) {
     .header{        /*----------------------------------------------MENU FIXO*/
-        background: white;
+        background: var(--MeuBranco);
     }
     #logomaintwo{
         font-size: 1.8rem;
     }
     .slidemain{
-        background: no-repeat bottom url("./IMG/map-mobile.svg");
+        background: no-repeat bottom url("./IMG/map-mobile.svg") var(--MeuBranco);
         background-size: cover;
         background-position-x: 65%;
     }
@@ -288,7 +355,7 @@ a{
         width: 100vw;
         top: 10vh;
         right: 0;
-        background: white;
+        background: var(--MeuBranco);
         height: 0;
         visibility: hidden;
         overflow-y: hidden;
@@ -303,7 +370,7 @@ a{
     .menu a{
         padding: 1rem 0;
         margin: 0 1rem;
-        border-bottom: 1px solid #42413e27;
+        border-bottom: 1px solid var(--MeuPretoTransp);
     }
     #btn-mobile{
         display: block; /*tirar depois o flex*/
@@ -336,6 +403,24 @@ a{
     #navmain.active #hamburger::after{
         transform: rotate(-135deg);
         top: -7px;
+    }
+
+    .portfolio .corpo{
+        width: 100%;
+        overflow: hidden;
+    }
+    .portfolio .corpo .cabecalho{
+        justify-content: center;
+    }
+    .portfolio .corpo .cabecalho .titulo::after{
+        border-bottom: 3px solid #42413E;
+    }
+    .portfolio .corpo .cabecalho .titulo > a{
+        font-size: 2.5rem;
+    }
+    .portfolio .corpo .conteudo .media-scroller{
+        grid-auto-columns: 90%;
+        gap: 10px;
     }
 }
 @media (max-width: 400px){
@@ -373,5 +458,5 @@ a{
 
 /* ANIMAÇÕES */
 .esbranquicado{
-    background: white;
+    background: var(--MeuBranco);
 }

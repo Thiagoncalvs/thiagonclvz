@@ -35,7 +35,7 @@ typeWriter(myh3);
 const target = document.querySelectorAll('[data-menubranco]');
 
 function animeScroll(){
-    const windowTop = window.pageYOffset - ((window.innerHeight * 3) / 10); 
+    const windowTop = window.pageYOffset - ((window.innerHeight * 3) / 15); 
     target.forEach(function(elementmenu){
         if((windowTop) > elementmenu.offsetTop){
             elementmenu.classList.add('esbranquicado');
@@ -66,7 +66,8 @@ function getScrollTopByHref(element){
 }
 function scrollToIdOnClick(event){
     event.preventDefault();
-    const to = getScrollTopByHref(event.target); // const to = getScrollTopByHref(event.target) - 10vh; --> para ficar abaixo do menu
+    const alturaMenu = document.getElementById('headerMenu').offsetHeight;
+    const to = getScrollTopByHref(event.target) - alturaMenu; // const to = getScrollTopByHref(event.target) - 10vh; --> para ficar abaixo do menu
 
     scrollToPosition(to); 
 }
@@ -108,4 +109,4 @@ function smoothScrollTo(endX, endY, duration) {
       }
       window.scroll(newX, newY);
     }, 1000 / 60); // 60 fps
-  };
+};
