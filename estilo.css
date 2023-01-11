@@ -112,7 +112,7 @@ a{
 }
 .slidemain{        /*----------------------------------------------MENU FIXO*/
     /* background: rgba(148, 74, 74, 0.377); */
-    background: no-repeat bottom url("./IMG/map.svg") var(--MeuBranco);
+    background: no-repeat bottom left url("./IMG/map.svg") var(--MeuBranco);
     background-size: cover;
 }
 .apresentacaoSlide{
@@ -222,7 +222,8 @@ a{
 }
 
 .artigospdf{        /*----------------------------------------------MENU FIXO*/
-    background: var(--MeuBranco);
+    background: no-repeat top right url(./IMG/Artigos.svg) var(--MeuBranco);
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -232,7 +233,8 @@ a{
     font-size: 2rem;
 }
 .redescontatos{        /*----------------------------------------------MENU FIXO*/
-    background: var(--MeuBranco);
+    background: no-repeat bottom right url(./IMG/Contatos.svg) var(--MeuBranco);
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -320,6 +322,12 @@ a{
         font-size: 2.2rem;
         padding: 1.5vh 0;
         width: 63vw;
+    }
+    .artigospdf{
+        background: var(--MeuBranco);
+    }
+    .redescontatos{
+        background: var(--MeuBranco);
     }
 }
 @media (max-width: 600px) {
