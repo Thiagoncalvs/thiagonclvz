@@ -108,7 +108,7 @@ a{
 .mainbody{        /*----------------------------------------------MENU FIXO*/
     background: white;
     display: grid;
-    grid-template-rows: 90vh 80vh 80vh 90vh;
+    grid-template-rows: 90vh 80vh 90vh;
 }
 .slidemain{        /*----------------------------------------------MENU FIXO*/
     /* background: rgba(148, 74, 74, 0.377); */
@@ -175,7 +175,7 @@ a{
     background-color: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 .portfolio .corpo .cabecalho .titulo{
@@ -190,29 +190,34 @@ a{
     border-bottom: 5px solid #42413E;
     width: 30%;
 }
-.portfolio .corpo .cabecalho .titulo > a{
+.portfolio .corpo .cabecalho .titulo > h1{
     font-size: 3rem;
 }
+.portfolio .corpo .cabecalho a:hover{
+    color: #E12B36;
+}
 .portfolio .corpo .conteudo{
-    background: none;
+    /* background: #E12B36; */
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    position: relative;
 }
 .portfolio .corpo .conteudo .media-scroller{
-    background: none;
+    /* background: #4fb14c; */
     width: 100%;
     height: 95%;
+
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 40%;
+    grid-auto-columns: 35%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     gap: 20px;
     scroll-snap-type: inline mandatory;
 }
 .portfolio .corpo .conteudo .media-scroller .media-element{
-    background: no-repeat center url(./IMG/Frame\ 4.png);
+    background: no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -222,15 +227,17 @@ a{
 }
 
 .artigospdf{        /*----------------------------------------------MENU FIXO*/
-    background: no-repeat top right url(./IMG/Artigos.svg) var(--MeuBranco);
+    background: no-repeat bottom right url(./IMG/Artigos.svg) var(--MeuVermelho);
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
 }
-.artigospdf > h1{
+.artigospdf .corpo{
+    width: 70%;
+    height: 90%;
+    background-color: #6bc472;
     align-self: center;
     justify-self: center;
-    font-size: 2rem;
 }
 .redescontatos{        /*----------------------------------------------MENU FIXO*/
     background: no-repeat bottom right url(./IMG/Contatos.svg) var(--MeuBranco);
@@ -238,10 +245,29 @@ a{
     display: grid;
     grid-template-columns: 1fr;
 }
-.redescontatos > h1{
+.redescontatos .corpo{
+    width: 70%;
+    height: 70%;
+    /* background-color: #6bc47e; */
     align-self: center;
     justify-self: center;
-    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.redescontatos .corpo .socialElement{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    width: auto;
+    height: 4rem;
+    background: var(--MeuPretoTransp);
+}
+.redescontatos .corpo .socialElement:hover p{
+    color: var(--MeuVermelho);
 }
 
 @media (min-width: 3800px) {
@@ -419,6 +445,8 @@ a{
     }
     .portfolio .corpo .cabecalho{
         justify-content: center;
+        flex-wrap: wrap;
+        gap: .3rem;
     }
     .portfolio .corpo .cabecalho .titulo::after{
         border-bottom: 3px solid #42413E;

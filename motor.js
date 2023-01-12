@@ -110,3 +110,88 @@ function smoothScrollTo(endX, endY, duration) {
       window.scroll(newX, newY);
     }, 1000 / 60); // 60 fps
 };
+
+// INPUT ITENS DO PORTFOLIO
+var ObjPort = {"myObject": [
+{
+    title: 'Pedro_Paulo_Assessoria_Esportiva',
+    path: "url(./IMG/Pedro.png)",
+    url: "https://thiagoncalvs.github.io/Client-Data/"
+},
+{
+    title: '#1',
+    path: "url(./IMG/Frame4.png)",
+    url: "/"
+},
+{ 
+    title: "#2",
+    path: "url(./IMG/Frame4.png)",
+    url: "/"
+},
+{ 
+   title: "#3",
+   path: "url(./IMG/Frame4.png)",
+   url: "/"
+},
+{ 
+   title: "#4",
+   path: "url(./IMG/Frame4.png)",
+   url: "/"
+}
+]
+}
+var count1 = Object.keys(ObjPort.myObject).length
+
+//alert(count);
+
+var container= document.getElementById('media-scroll');
+
+for(var i=0;i<count1;i++){
+    //console.log(jsonObj.myObject[i]);
+  
+    var obj= ObjPort.myObject[i];
+    var button = "<a href="+obj.url+"><div title="+obj.title+" class='media-element' style='background-image:"+obj.path+";'></div></a>";
+    
+    container.innerHTML
+    +=button;
+}
+
+// INPUT ITENS DO CONTATOS
+var ObjCont = {"myObject": [
+{
+    contente: 'Instagram: @thiagonclvz',
+    url: "/siteDefault"
+},
+{
+    contente: 'GitHub: @thiagonclvz',
+    url: "/siteOne"
+},
+{ 
+    contente: "Whatsapp: +55 96 99173-3766",
+    url: "/siteTwo"
+},
+{ 
+    contente: "Email: thiagoncalvz@gmail.com",
+    url: "/sitethree"
+},
+{ 
+    contente: "twitter: @THIAGOSGONALVE1",
+    url: "/sitefour"
+}
+]
+}
+var count2 = Object.keys(ObjCont.myObject).length
+
+//alert(count);
+
+var container= document.getElementById('corpocontatos');
+
+for(var i=0;i<count2;i++){
+    //console.log(jsonObj.myObject[i]);
+    
+    var obj= ObjCont.myObject[i];
+    var button = "<a href="+obj.url+"><div class='socialElement'><p>"+obj.contente+"</p></div></a>";
+    
+    container.innerHTML
+    +=button;
+}

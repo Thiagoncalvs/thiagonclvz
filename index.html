@@ -20,7 +20,7 @@
             <ul class="menu" role="menu">
                 <li><a ontouchend="toggleMenu(event)" href="#home">home</a></li>
                 <li><a ontouchend="toggleMenu(event)" href="#portfolio">Portfolio</a></li>
-                <li><a ontouchend="toggleMenu(event)" href="#artigos">Articles in pdf</a></li>
+                <!-- <li><a ontouchend="toggleMenu(event)" href="#artigos">Articles in pdf</a></li> -->
                 <li><a ontouchend="toggleMenu(event)" href="#contatos">Social Media and Contact</a></li>
             </ul>
         </nav>
@@ -37,44 +37,18 @@
             <div class="corpo">
                 <div class="cabecalho">
                     <div class="titulo">
-                        <a>PORTFOLIO</a>
+                        <h1>PORTFOLIO</h1>
                     </div>
+                    <a href="#">Repositório GitHub</a>
                 </div>
                 <div class="conteudo">
-                    <div class="media-scroller">
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                        <a href="#">
-                            <div class="media-element"></div>
-                        </a>
-                    </div>
+                    <div id="media-scroll" class="media-scroller"></div>
                 </div>
             </div>
         </section>
-        <section id="artigos" class="artigospdf">
-            <h1>&#x1f477; artigos/pdf &#x1f6a7;</h1>
-        </section>
+        <!-- <section id="artigos" class="artigospdf"><div class="corpo"></div></section> -->
         <section id="contatos" class="redescontatos">
-            <h1>&#x1f477; contatos &#x1f6a7;</h1>
+            <div id="corpocontatos" class="corpo"></div>
         </section>
     </section>
     <script src="./motor.js"></script>
