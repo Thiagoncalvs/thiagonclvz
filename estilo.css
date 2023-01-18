@@ -235,35 +235,41 @@ a{
 .artigospdf .corpo{
     width: 70%;
     height: 90%;
-    background-color: #6bc472;
+    /* background-color: #6bc472; */
     align-self: center;
     justify-self: center;
 }
 .redescontatos{        /*----------------------------------------------MENU FIXO*/
-    background: no-repeat bottom right url(./IMG/Contatos.svg) var(--MeuBranco);
+    background: no-repeat bottom right url(./IMG/Contatos.svg) var(--MeuVermelho);
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
 }
 .redescontatos .corpo{
-    width: 70%;
-    height: 70%;
-    /* background-color: #6bc47e; */
+    width: 70vw;
+    height: 30vw;
+    /* background-color: #6b6dc4; */
     align-self: center;
     justify-self: center;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 10px;
+}
+.redescontatos .corpo .allContatos{
+    /* background: #e12b3757; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 .redescontatos .corpo .socialElement{
     display: flex;
+    flex-direction: row;
     justify-items: center;
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 5px;
-    width: auto;
-    height: 4rem;
+    width: fit-content;
+    height: fit-content;
     background: var(--MeuPretoTransp);
 }
 .redescontatos .corpo .socialElement:hover p{
@@ -457,6 +463,15 @@ a{
     .portfolio .corpo .conteudo .media-scroller{
         grid-auto-columns: 90%;
         gap: 10px;
+    }
+    .redescontatos .corpo{
+        width: 95vw;
+        height: 95vw;
+        grid-template-columns: 1fr;
+    }
+    .redescontatos .corpo .allContatos{
+        align-items: center;
+        gap: 2rem;
     }
 }
 @media (max-width: 400px){

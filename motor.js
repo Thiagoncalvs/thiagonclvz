@@ -112,86 +112,34 @@ function smoothScrollTo(endX, endY, duration) {
 };
 
 // INPUT ITENS DO PORTFOLIO
-var ObjPort = {"myObject": [
-{
-    title: 'Pedro_Paulo_Assessoria_Esportiva',
-    path: "url(./IMG/Pedro.png)",
-    url: "https://thiagoncalvs.github.io/Client-Data/"
-},
-{
-    title: '#1',
-    path: "url(./IMG/Frame4.png)",
-    url: "/"
-},
-{ 
-    title: "#2",
-    path: "url(./IMG/Frame4.png)",
-    url: "/"
-},
-{ 
-   title: "#3",
-   path: "url(./IMG/Frame4.png)",
-   url: "/"
-},
-{ 
-   title: "#4",
-   path: "url(./IMG/Frame4.png)",
-   url: "/"
-}
-]
-}
-var count1 = Object.keys(ObjPort.myObject).length
+const respostaPort = fetch("datas.json").then(respostaData => {
+    return respostaData.json();
+}).then(jsonData => {
+    var count = Object.keys(jsonData.objPort).length
 
-//alert(count);
+    var container1 = document.getElementById('media-scroll');
 
-var container= document.getElementById('media-scroll');
+    for(var i = 0 ; i < count ; i++){
+        var obj = jsonData.objPort[i];
+        var button = "<a href="+obj.url+"><div title="+obj.title+" class='media-element' style='background-image:"+obj.path+";'></div></a>";
 
-for(var i=0;i<count1;i++){
-    //console.log(jsonObj.myObject[i]);
-  
-    var obj= ObjPort.myObject[i];
-    var button = "<a href="+obj.url+"><div title="+obj.title+" class='media-element' style='background-image:"+obj.path+";'></div></a>";
-    
-    container.innerHTML
-    +=button;
-}
+        container1.innerHTML +=button;
+    }
+}).catch(erro => { console.log('Deu um erro: ' + erro); });
+
 
 // INPUT ITENS DO CONTATOS
-var ObjCont = {"myObject": [
-{
-    contente: 'Instagram: @thiagonclvz',
-    url: "/siteDefault"
-},
-{
-    contente: 'GitHub: @thiagonclvz',
-    url: "/siteOne"
-},
-{ 
-    contente: "Whatsapp: +55 96 99173-3766",
-    url: "/siteTwo"
-},
-{ 
-    contente: "Email: thiagoncalvz@gmail.com",
-    url: "/sitethree"
-},
-{ 
-    contente: "twitter: @THIAGOSGONALVE1",
-    url: "/sitefour"
-}
-]
-}
-var count2 = Object.keys(ObjCont.myObject).length
+const respostaCont = fetch("datas.json").then(respostaData => {
+    return respostaData.json();
+}).then(jsonData => {
+    var count = Object.keys(jsonData.objCont).length
 
-//alert(count);
+    var container1 = document.getElementById('corpocontatos');
 
-var container= document.getElementById('corpocontatos');
+    for(var i = 0 ; i < count ; i++){
+        var obj = jsonData.objCont[i];
+        var button = "<a href="+obj.url+"><div class='socialElement'><p>"+obj.contente+"</p></div></a>";
 
-for(var i=0;i<count2;i++){
-    //console.log(jsonObj.myObject[i]);
-    
-    var obj= ObjCont.myObject[i];
-    var button = "<a href="+obj.url+"><div class='socialElement'><p>"+obj.contente+"</p></div></a>";
-    
-    container.innerHTML
-    +=button;
-}
+        container1.innerHTML +=button;
+    }
+}).catch(erro => { console.log('Deu um erro: ' + erro); });
