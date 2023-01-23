@@ -20,7 +20,7 @@
 }
 :root{
     --MeuPreto: #42413E;
-    --MeuPretoTransp: #42413e27;
+    --MeuPretoTransp: #42413e0c;
     --MeuBranco: #f7f7f7;
     --MeuVermelho: #E12B36;
 
@@ -37,7 +37,7 @@ body, ul, li, p{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1vw;
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'robotoRegular', sans-serif;
     text-transform: uppercase;
@@ -75,7 +75,7 @@ a{
 #logomaintwo{
     /* background: #bd5e64; */
     display: flex;
-    font-size: 3.2rem;
+    font-size: 3vw;
 }
 #logomaintwo .logopartone{
     /* color: aliceblue; */
@@ -89,11 +89,11 @@ a{
     display: flex;
 }
 .menu li{
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 .menu li a{
     display: block;
-    padding: 10px;
+    padding: 1rem;
     color: #42413E;
 }
 .menu li a:hover{
@@ -240,7 +240,7 @@ a{
     justify-self: center;
 }
 .redescontatos{        /*----------------------------------------------MENU FIXO*/
-    background: no-repeat bottom right url(./IMG/Contatos.svg) var(--MeuVermelho);
+    background: no-repeat bottom right url(./IMG/Contatos.svg) var(--MeuBranco);
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
